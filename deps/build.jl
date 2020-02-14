@@ -3,6 +3,7 @@
 using Conda
 using PyCall
 
+pycmd = PyCall.python
 if findfirst("minatar", read(`$pycmd -m pip list`)) == nothing
     pycmd = PyCall.python
     run(`$pycmd -m pip install git`)
