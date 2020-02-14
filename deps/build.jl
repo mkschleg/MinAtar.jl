@@ -12,13 +12,13 @@ if isfile(Conda.conda)
     
     if findfirst("minatar", read(`$(Conda.conda) list`, String)) == nothing
         pycmd = PyCall.python
-        run(`$pycmd -m pip install git+https://github.com/kenjyoung/MinAtar.git`)
+        run(`$pycmd -m pip install --progress-bar off git+https://github.com/kenjyoung/MinAtar.git`)
     end
 else
     Conda.add("pip")
     Conda.add("git")
     pycmd = PyCall.python
-    run(`$pycmd -m pip install git+https://github.com/kenjyoung/MinAtar.git`)
+    run(`$pycmd -m pip  install --progress-bar off git+https://github.com/kenjyoung/MinAtar.git`)
 end
 
 
