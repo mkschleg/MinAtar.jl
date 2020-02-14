@@ -3,12 +3,23 @@ module MinAtar
 using PyCall
 using RecipesBase
 using Colors
-# using ColorSchemes
 
-const games = ["asterix", "breakout", "freeway", "seaquest"]
+export
+    MinAtarEnv,
+    act!,
+    reset!,
+    get_state,
+    state_shape,
+    num_actions,
+    gamename,
+    minimal_action_set
 
-export MinAtarEnv
+"""
+    MinAtarEnv(gamename, sticky_action_prob, difficulty_ramping, random_seed)
 
+A wrapper struct for the python MinAtar project.
+
+"""
 mutable struct MinAtarEnv
     gamename::String
     pygame::PyObject  # the pythong game
@@ -39,7 +50,7 @@ end
 act!(env::MinAtarEnv, a) = env.pyact(a)
 reset!(env::MinAtarEnv) = env.pyreset()
 get_state(env::MinAtarEnv) = env.pystate()
-get_state_shape(env::MinAtarEnv) = env.pygame.state_shape()
+state_shape(env::MinAtarEnv) = env.pygame.state_shape()
 num_actions(env::MinAtarEnv) = 6
 gamename(env::MinAtarEnv) = env.gamename
 minimal_action_state(env::MinAtarEnv) = env.pygame.minimal_action_set()
