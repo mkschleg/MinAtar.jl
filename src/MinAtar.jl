@@ -64,9 +64,14 @@ minimal_action_state(env::MinAtarEnv) = env.pygame.minimal_action_set()
     
     screen = fill(Colors.RGB(0.0, 0.0, 0.0), 10, 10)
     state = env.pystate()
-    
-    for i in 1:size(state)[end]
-        screen[findall((x)->x==1.0, state[:,:, i])] .= env.colors[i]
+    if eltype(state) isa Float64
+        for i in 1:size(state)[end]
+            screen[findall((x)->x==1.0, state[:,:, i])] .= env.colors[i]
+        end
+    elseif eltype(state) isa Bool
+        for i in 1:size(state)[end]
+            screen[findall((x)->x, state[:,:, i])] .= env.colors[i]
+        end
     end
     screen
 end
