@@ -3,6 +3,13 @@ uuid = "a0b457aa-173f-450d-9d76-dd2c7c1da9bd"
 authors = ["Matthew Schlegel <mkschleg@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
+Colors = "5ae59095-9a9b-59fe-a467-6f913c188581"
+Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
+
 [compat]
 julia = "1"
 

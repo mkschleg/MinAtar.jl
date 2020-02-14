@@ -1,0 +1,23 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+# All requested packages already installed.
+
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+# All requested packages already installed.
+
+[ Info: Running `conda install -y pip` in root environment
+[ Info: Running `conda install -y git` in root environment
+ERROR: LoadError: MethodError: no method matching python_dir()
+Closest candidates are:
+  python_dir(!Matched::Union{AbstractString, Symbol}) at /Users/Matt/.julia/packages/Conda/kLXeC/src/Conda.jl:70
+Stacktrace:
+ [1] top-level scope at /Users/Matt/Documents/Developer_Projects/JuliaDev/MinAtar/deps/build.jl:10
+ [2] include at ./boot.jl:328 [inlined]
+ [3] include_relative(::Module, ::String) at ./loading.jl:1105
+ [4] include(::Module, ::String) at ./Base.jl:31
+ [5] include(::String) at ./client.jl:424
+ [6] top-level scope at none:5
+in expression starting at /Users/Matt/Documents/Developer_Projects/JuliaDev/MinAtar/deps/build.jl:10
