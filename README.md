@@ -12,7 +12,8 @@ A binding for [MinAtar](https://github.com/kenjyoung/MinAtar). Some weirdness w/
 
 
 ## Some other weirdness:
-- The state is returned from MinAtar as an Array of Float64s, where they really only need to be boolean. I'm talking w/ Kenny to maybe get this changed.
+- ~The state is returned from MinAtar as an Array of Float64s, where they really only need to be boolean. I'm talking w/ Kenny to maybe get this changed.~
+- There may be some issues w/ the pip install. In travis we rarely get `openSSL` errors, but have no way of dealing with this. If you are using your local machine and have used python before you should be able to debug this issues yourself.
 
 
 
