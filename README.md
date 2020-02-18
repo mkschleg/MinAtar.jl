@@ -4,7 +4,11 @@
 
 A binding for [MinAtar](https://github.com/kenjyoung/MinAtar). Some weirdness w/ python but should be ok if your python environment is mostly clean. Visulization is supported through a Plots recipe and should be equivalent to the plotting in the python version (but you can use the underlying python version if you really want....). 
 
-This isn't on the registry yet, but will be soonish.
+## Installation
+
+```julia
+]add MinAtar
+```
 
 
 ## Some other weirdness:
